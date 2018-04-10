@@ -1,7 +1,30 @@
-Chrom	Position	Ref	Var	Cons:Cov:Reads1:Reads2:Freq:P-value	StrandFilter:R1+:R1-:R2+:R2-:pval	SamplesRef	SamplesHet	SamplesHom	SamplesNC	Cons:Cov:Reads1:Reads2:Freq:P-value
-NC_000913.3	92439	G	A	A:147:1:146:99.32%:1.0001E-85	Pass:1:0:72:74:1E0	0	0	1	0	A:147:1:146:99.32%:1.0001E-85
-NC_000913.3	803662	C	A	A:105:0:105:100%:1.1051E-62	Pass:0:0:47:58:1E0	0	0	1	0	A:105:0:105:100%:1.1051E-62
-NC_000913.3	852762	A	G	G:148:0:148:100%:1.6951E-88	Pass:0:0:117:31:1E0	0	0	1	0	G:148:0:148:100%:1.6951E-88
-NC_000913.3	1905761	G	A	A:116:0:116:100%:2.7689E-69	Pass:0:0:68:48:1E0	0	0	1	0	A:116:0:116:100%:2.7689E-69
-NC_000913.3	3535147	A	C	C:78:0:78:100%:1.7165E-46	Pass:0:0:46:32:1E0	0	0	1	0	C:78:0:78:100%:1.7165E-46
-NC_000913.3	4390754	G	T	T:107:0:107:100%:6.972E-64	Pass:0:0:68:39:1E0	0	0	1	0	T:107:0:107:100%:6.972E-64
+##fileformat=VCFv4.1
+##source=VarScan2
+##INFO=<ID=ADP,Number=1,Type=Integer,Description="Average per-sample depth of bases with Phred score >= 15">
+##INFO=<ID=WT,Number=1,Type=Integer,Description="Number of samples called reference (wild-type)">
+##INFO=<ID=HET,Number=1,Type=Integer,Description="Number of samples called heterozygous-variant">
+##INFO=<ID=HOM,Number=1,Type=Integer,Description="Number of samples called homozygous-variant">
+##INFO=<ID=NC,Number=1,Type=Integer,Description="Number of samples not called">
+##FILTER=<ID=str10,Description="Less than 10% or more than 90% of variant supporting reads on one strand">
+##FILTER=<ID=indelError,Description="Likely artifact due to indel reads at this position">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##FORMAT=<ID=SDP,Number=1,Type=Integer,Description="Raw Read Depth as reported by SAMtools">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Quality Read Depth of bases with Phred score >= 15">
+##FORMAT=<ID=RD,Number=1,Type=Integer,Description="Depth of reference-supporting bases (reads1)">
+##FORMAT=<ID=AD,Number=1,Type=Integer,Description="Depth of variant-supporting bases (reads2)">
+##FORMAT=<ID=FREQ,Number=1,Type=String,Description="Variant allele frequency">
+##FORMAT=<ID=PVAL,Number=1,Type=String,Description="P-value from Fisher's Exact Test">
+##FORMAT=<ID=RBQ,Number=1,Type=Integer,Description="Average quality of reference-supporting bases (qual1)">
+##FORMAT=<ID=ABQ,Number=1,Type=Integer,Description="Average quality of variant-supporting bases (qual2)">
+##FORMAT=<ID=RDF,Number=1,Type=Integer,Description="Depth of reference-supporting bases on forward strand (reads1plus)">
+##FORMAT=<ID=RDR,Number=1,Type=Integer,Description="Depth of reference-supporting bases on reverse strand (reads1minus)">
+##FORMAT=<ID=ADF,Number=1,Type=Integer,Description="Depth of variant-supporting bases on forward strand (reads2plus)">
+##FORMAT=<ID=ADR,Number=1,Type=Integer,Description="Depth of variant-supporting bases on reverse strand (reads2minus)">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	Sample1
+Chromosome 92439 . G A . PASS ADP=147;WT=0;HET=0;HOM=1;NC=0 GT:GQ:SDP:DP:RD:AD:FREQ:PVAL:RBQ:ABQ:RDF:RDR:ADF:ADR 1/1:255:147:147:1:146:99.32%:1.0001E-85:35:39:1:0:72:74
+Chromosome 803662 . C A . PASS ADP=105;WT=0;HET=0;HOM=1;NC=0 GT:GQ:SDP:DP:RD:AD:FREQ:PVAL:RBQ:ABQ:RDF:RDR:ADF:ADR 1/1:255:105:105:0:105:100%:1.1051E-62:0:42:0:0:47:58
+Chromosome 852762 . A G . PASS ADP=148;WT=0;HET=0;HOM=1;NC=0 GT:GQ:SDP:DP:RD:AD:FREQ:PVAL:RBQ:ABQ:RDF:RDR:ADF:ADR 1/1:255:148:148:0:148:100%:1.6951E-88:0:38:0:0:117:31
+Chromosome 1905761 . G A . PASS ADP=116;WT=0;HET=0;HOM=1;NC=0 GT:GQ:SDP:DP:RD:AD:FREQ:PVAL:RBQ:ABQ:RDF:RDR:ADF:ADR 1/1:255:118:116:0:116:100%:2.7689E-69:0:40:0:0:68:48
+Chromosome 3535147 . A C . PASS ADP=78;WT=0;HET=0;HOM=1;NC=0 GT:GQ:SDP:DP:RD:AD:FREQ:PVAL:RBQ:ABQ:RDF:RDR:ADF:ADR 1/1:255:78:78:0:78:100%:1.7165E-46:0:34:0:0:46:32
+Chromosome 4390754 . G T . PASS ADP=107;WT=0;HET=0;HOM=1;NC=0 GT:GQ:SDP:DP:RD:AD:FREQ:PVAL:RBQ:ABQ:RDF:RDR:ADF:ADR 1/1:255:108:107:0:107:100%:6.972E-64:0:35:0:0:68:39
